@@ -23,6 +23,19 @@ public class UserService {
         return Optional.empty();
     }
 
+    public Optional<UserEntity> getUserByUsername(String username) {
+        UserEntity existUser = userDao.findByUsername(username);
+        if(existUser == null) {
+            return Optional.empty();
+        } else {
+            return Optional.of(existUser);
+        }
+    }
+
+    public Optional<UserEntity> getUserById(int id) {
+        return userDao.findById(id);
+    }
+
     public Optional<UserEntity> createUser(UserEntity user) {
         UserEntity existUser = userDao.findByUsername(user.getUsername());
         if(existUser != null) {

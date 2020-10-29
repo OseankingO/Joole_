@@ -13,7 +13,8 @@ public class BrandController {
     BrandService brandService;
 
     @GetMapping("/{brandId}")
-    public @ResponseBody BrandEntity getBrandById(@PathVariable int brandId) {
+    @ResponseBody
+    public BrandEntity getBrandById(@PathVariable int brandId) {
         BrandEntity res = brandService.getBrandEntityById(brandId).get();
         System.out.println(res.getName());
         return res;

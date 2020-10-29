@@ -28,7 +28,30 @@ public class UserController {
         }
     }
 
+    @GetMapping("/username/{username}")
+    @ResponseBody
+    public ResponseEntity<?> getUserByUsername(@PathVariable String username) {
+        Optional<UserEntity> result = userService.getUserByUsername(username);
+        if(result.isPresent()) {
+            return new ResponseEntity<>(result.get(), HttpStatus.OK);
+        } else {
+            return new ResponseEntity<>("No User Found!", HttpStatus.OK);
+        }
+    }
+
+    @GetMapping("/{id}")
+    @ResponseBody
+    public ResponseEntity<?> getUserById(@PathVariable int id) {
+        Optional<UserEntity> result = userService.getUserById(id    );
+        if(result.isPresent()) {
+            return new ResponseEntity<>(result.get(), HttpStatus.OK);
+        } else {
+            return new ResponseEntity<>("No User Found!", HttpStatus.OK);
+        }
+    }
+
     @PostMapping("")
+    @ResponseBody
     public ResponseEntity<?> createUser(@RequestBody UserEntity userEntity) {
         Optional<UserEntity> res = userService.createUser(userEntity);
         if(res.isPresent()) {
@@ -36,5 +59,4 @@ public class UserController {
         }
         return new ResponseEntity<>("Username Existed!", HttpStatus.OK);
     }
-
 }
