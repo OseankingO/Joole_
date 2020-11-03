@@ -1,0 +1,55 @@
+.project-container {
+    height: 25vw;
+    width: 18vw;
+    border: solid;
+    border-color: lightgray;
+    border-width: 0.2vw;
+    margin-left: 0.7vw;
+}
+
+.project-container:hover {
+    border-color: #235370;
+}
+
+.project-container:active {
+    border-color: lightgray;
+}
+
+.product-picture-container {
+    height: 30%;
+    width: 100%;
+    background-color: #235370;
+    color: #e6e6e6;
+}
+
+.description-container {
+    height: 20%;
+    width: 100%;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: auto;
+}
+
+.description {
+    margin: 0 0 0 0;
+    color: #235370;
+    font-weight: bold;
+}
+
+.properties-container {
+    width: 100%;
+    padding-top: 1vw;
+    padding-bottom: 1vw;
+
+    background-color: #e6e6e6;
+
+    display: grid;
+    justify-content: center;
+    grid-template-columns: auto;
+
+}
+
+.properties {
+    margin: 0 0 0 0;
+    color: #595959;
+}

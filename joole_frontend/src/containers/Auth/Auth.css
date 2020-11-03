@@ -1,0 +1,67 @@
+.Auth {
+    background-image: linear-gradient(#8fc9ff, #ffffff);
+    width: 100vw;
+    height: 50vw;
+    /* margin: 1vw;
+    border-style: solid;
+    border-width: 1px; */
+}
+
+.logo-container {
+    height: 40%;
+    margin: 0;
+}
+
+.block {
+    height: 40%;
+    display: block;
+}
+
+.logo {
+    margin: 0;
+    font-size: 10vw;
+    background-color: transparent;
+}
+
+.text {
+    background-color: transparent;
+}
+
+.submit-button-container {
+    width: 27%;
+    padding-top: 2vw;
+    padding-right: 5vw;
+    display: inline-flex;
+    align-items: center;
+}
+
+.submit-button {
+    height: 2vw;
+    width: 6vw;
+    background-color: #486b8c;
+    color: white;
+    margin-left: auto;
+    border-radius: 0.5vw;
+    box-shadow: 0;
+    cursor: pointer;
+}
+
+.submit-button:disabled {
+    color: #ccc;
+    cursor: not-allowed;
+}
+
+.switch-button-block {
+    position: absolute;
+    top: 4vw;
+    right: 10vw;
+}
+
+.switch-button {
+    border: 0;
+    background-color: transparent;
+    color: #454545;
+    font-size: 1vw;
+    font-weight: bold;
+    cursor: pointer;
+}
