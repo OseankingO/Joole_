@@ -1,0 +1,32 @@
+#product-list-area {
+    width: 100%;
+    display: inline-flex;
+    flex-direction: column;
+}
+
+.product-list-info-container {
+    height: 5vw;
+    margin-left: 1.5vw;
+    display: inline-flex;
+    justify-content: start;
+    align-items: center;
+}
+
+#product-list-display-container {
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    row-gap: 2vw;
+    justify-content: space-evenly;
+}
+
+.cat-name {
+    margin-left: 0.5vw;
+    font-size: 1.5vw;
+    font-weight: bold;
+    color: #235370;
+}
+
+.last-input-value {
+    margin-left: 0.5vw;
+    font-size: 1.5vw;
+}

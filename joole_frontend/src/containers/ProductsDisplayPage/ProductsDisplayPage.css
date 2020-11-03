@@ -1,0 +1,39 @@
+#product-display-page {
+    height: 100vw;
+    display: grid;
+    grid-template-rows: 10% 90%;
+}
+#header {
+    width: 100%;
+    background-image: linear-gradient(to left, #8fc9ff, #ffffff);
+    display: inline-flex;
+    align-items: center;
+}
+
+.logo-small {
+    margin: 0;
+    font-size: 5vw;
+    background-color: transparent;
+    margin-right: 13vw;
+}
+
+#main-area {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 20% 80%
+}
+
+#side-bar {
+    height: 100%;
+    border: solid;
+    border-left: none;
+    border-right: none;
+    border-color: #c2c2c2;
+    /* background-color: black; */
+}
+
+#main-display {
+    border: solid;
+    border-right: none;
+    border-color: #c2c2c2;
+}
