@@ -174,3 +174,51 @@ export const initProductDetial = (productId) => {
     };
 };
 
+export const selectProductCompare = (productId, list) => {
+    productId = parseInt(productId);
+    if(!list) {
+        list = [];
+    }
+    if(list.includes(productId)) {
+        const indext = list.indexOf(productId);
+        list.splice(indext, 1);
+    } else {
+        list.push(productId);
+    }
+    return dispatch =>{
+        dispatch({
+            type: actionTypes.PRODCUT_SELECT_COMPARE,
+            selectedCompareIdList: list
+        });
+        
+    };
+}
+
+export const compareProduct = (idList, productList) => {
+    const selectList = []
+    for(let id of idList) {
+        selectList.push(productList.find(product => product.id === id));
+    }
+    return dispatch =>{
+        dispatch({
+            type: actionTypes.PRODCUT_COMPARE,
+            selectedCompareProjuctList: selectList,
+            redirectURL: '/compare'
+        });
+        
+    };
+}
+
+export const initComparePage = (idList, productList) => {
+    return dispatch =>{
+        dispatch({
+            type: actionTypes.PRODCUT_COMPARE_INIT
+        });
+        
+    };
+}
+
+
+
+
+

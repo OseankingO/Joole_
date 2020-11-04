@@ -38,8 +38,8 @@
 
 .properties-container {
     width: 100%;
-    padding-top: 1vw;
-    padding-bottom: 1vw;
+    padding-top: 0.5vw;
+    padding-bottom: 0.5vw;
 
     background-color: #e6e6e6;
 
@@ -52,4 +52,37 @@
 .properties {
     margin: 0 0 0 0;
     color: #595959;
+}
+
+.extra-properties-container {
+    width: 100%;
+    padding-top: 0.5vw;
+    padding-bottom: 0.5vw;
+
+    display: grid;
+    justify-content: center;
+    grid-template-columns: auto;
+}
+
+.extra-properties {
+    margin: 0 0 0 0;
+    color: #b00000;
+}
+
+.project-bottom-container {
+    width: 100%;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: 55% 45%;
+}
+
+.project-add-button {
+    padding-left: 0.5vw;
+    width: 7vw;
+    height: 2.5vw;
+    background-color: #607da3;
+    color: white;
+    border-radius: 0.4vw;
+    text-align: start;
 }

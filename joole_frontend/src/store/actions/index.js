@@ -17,5 +17,8 @@ export {
 export {
     getProductList,
     selectProduct,
-    initProductDetial
+    initProductDetial,
+    selectProductCompare,
+    compareProduct,
+    initComparePage
 } from './subActions/product';

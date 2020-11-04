@@ -1,0 +1,53 @@
+.compare-form {
+    width: 20vw;
+    display: flex;
+    flex-direction: column;
+}
+
+.compare-form-picture-container {
+    width: 100%;
+    height: 15vw;
+}
+
+.compare-form-picture {
+    width: 92%;
+    height: 92%;
+    margin: 4%;
+    background-color: #235370;
+}
+
+.compare-form-picture-text {
+    color: white;
+}
+
+.compare-form-item {
+    margin: 0;
+    width: 100%;
+    height: 2vw;
+    border-bottom: solid;
+    border-bottom-width: 0.1vw;
+    border-color: #f2f2f2;
+}
+
+.compare-form-item-gray {
+    background-color: lightgray;
+}
+
+.compare-form-item-left {
+    text-align: left;
+}
+
+.compare-form-item-underline {
+    border-bottom: solid;
+    border-bottom-width: 0.1vw;
+}
+
+.compare-form-two-value {
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+}
+
+.compare-form-block {
+    border: solid;
+    border-width: 0.1vw;
+}

@@ -52,7 +52,7 @@ class ProductDetial extends Component {
             typeForm = 
                 <div className='product-info-row-list'>
                     {this.props.selectedProduct.type.map(type => (
-                        <div className='product-info-row'>
+                        <div key={type.id} className='product-info-row'>
                             <p className='info-item info-name'>{type.name}</p>
                             {type.extraValue ?  
                                 <div className='product-info-min-max'>
@@ -107,11 +107,18 @@ class ProductDetial extends Component {
                     </div>
                 </div>
                 <div className='product-display-container'>
-                    <div className='product-list-info-container'>
-                        <span className='small-picture'>Picture</span>
+                    <div id='product-display-info-container' class='product-list-info-container'>
                         <span className='cat-name'>{this.props.categoryName + ' > '}</span>
                         <span className='cat-name'>{this.props.productLineName + ' > '}</span>
+                        <span className='last-input-value'>{this.props.selectedProduct.model}</span>
+                    </div>
+                    <div className='product-list-info-container'>
+                        <span className='small-picture'>Picture</span>
+                        <span className='cat-name'>{this.props.categoryName + ' / '}</span>
+                        <span className='cat-name'>{this.props.productLineName + ' / '}</span>
                         <span className='cat-name'>{this.props.selectedProduct.model}</span>
+                        <span className='cat-name-red'>I don't know what's this</span>
+                        <button className='header-button project-add-button'>Add to</button>  
                     </div>
                     <div className='product-detial-display-area'>
                         <h1 className='product-detial-header'>Product Summary</h1>
@@ -152,8 +159,7 @@ const mapStateToProps = state => {
         selectedProduct: state.product.selectedProduct,
         detials: state.product.detials,
         productLineName: state.product.productLineName,
-        categoryName: state.product.categoryName,
-        productLineName: state.product.productLineName
+        categoryName: state.product.categoryName
     };
 };
 

@@ -163,20 +163,24 @@ class Auth extends Component {
             ...this.state.controls,
             username: {
                 ...this.state.controls.username,
+                touched: false,
                 value: ''
             },
             password: {
                 ...this.state.controls.password,
+                touched: false,
                 value: ''
             },
             confirmPassword: {
                 ...this.state.controls.confirmPassword,
                 use: this.state.isSignup ? false : true,
+                touched: false,
                 value: ''
             },
             email: {
                 ...this.state.controls.email,
                 use: this.state.isSignup ? false : true,
+                touched: false,
                 value: ''
             }
         };

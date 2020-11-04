@@ -39,6 +39,19 @@ class ProductList extends Component {
     projectClickedHandler = (product) => {
         this.props.selectProduct(product, this.props.categoryName);
     }
+
+    checkBoxChangeHandler = (event) => {
+        this.props.selectProductCompare(event.target.value, this.props.selectedCompareIdList);
+    }
+    
+    compareClickedHandler = () => {
+        if(this.props.selectedCompareIdList && this.props.selectedCompareIdList.length > 1) {
+            this.props.compareProduct(this.props.selectedCompareIdList, this.props.productList);
+        } else {
+            alert('Please Select At Least Two Products!')
+        }
+        
+    }
     
     render() {
 
@@ -60,6 +73,7 @@ class ProductList extends Component {
                     brand={product.brand}
                     properties= {product.technicalspecifications} 
                     clicked={() => this.projectClickedHandler(product)}
+                    checkChange={(event) => this.checkBoxChangeHandler(event)}
                     // pic = {}
                 />
             ));
@@ -71,6 +85,7 @@ class ProductList extends Component {
                 <div class='product-list-info-container'>
                     <span className='cat-name'>{this.props.categoryName + ' > '}</span>
                     <span className='last-input-value'>{lastInput}</span>
+                    <button className='compare-button' onClick={this.compareClickedHandler}>Compare</button>
                 </div>
                 <div id='product-list-display-container'>
                     {products}
@@ -88,7 +103,8 @@ const mapStateToProps = state => {
         productLineList: state.category.searchResults,
         needUpdate: state.category.needUpdate,
         productList: state.product.productList,
-        redirectURL: state.product.redirectURL
+        redirectURL: state.product.redirectURL,
+        selectedCompareIdList: state.product.selectedCompareIdList,
     };
 };
 
@@ -97,7 +113,9 @@ const mapDispatchToProps = dispatch => {
         getProductList: (idList) => dispatch(actions.getProductList(idList)),
         getCategoryName: (categoryId) => dispatch(actions.getCategoryName(categoryId)),
         updated: () => dispatch(actions.searchUpdated()),
-        selectProduct: (product, categoryName) => dispatch(actions.selectProduct(product, categoryName))
+        selectProduct: (product, categoryName) => dispatch(actions.selectProduct(product, categoryName)),
+        selectProductCompare: (productId, list) => dispatch(actions.selectProductCompare(productId, list)),
+        compareProduct: (idList, productList) => dispatch(actions.compareProduct(idList, productList)),
     };
 };
 

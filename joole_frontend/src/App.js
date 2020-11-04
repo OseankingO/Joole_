@@ -2,6 +2,7 @@ import { Component } from 'react';
 import { Redirect, Route, Switch } from 'react-router-dom';
 import './App.css';
 import Auth from './containers/Auth/Auth';
+import ComparePage from './containers/ComparePage/ComparePage';
 import Home from './containers/Home/Home';
 import ProductDetial from './containers/ProductDetial/ProductDetial';
 import ProductsDisplayPage from './containers/ProductsDisplayPage/ProductsDisplayPage';
@@ -17,6 +18,7 @@ class App extends Component {
         <Route path='/search' component={SearchPage} />
         <Route path='/main' component={ProductsDisplayPage} />
         <Route path='/detial' component={ProductDetial} />
+        <Route path='/compare' component={ComparePage} />
         <Route path='/' exact component={Home} />
         <Redirect to='/' />
       </Switch>

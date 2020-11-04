@@ -3,7 +3,6 @@ import * as actionTypes from '../actionTypes';
 
 export const logIn = (username, password) => {
     return dispatch => {
-        console.log("started!")
         dispatch(authStart());
         const user = {
             username: username,

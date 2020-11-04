@@ -1,0 +1,9 @@
+.compare-form-area {
+    margin: 2%;
+    padding: 1%;
+    border: solid;
+    border-width: 0.2vw;
+    border-color:#88aad1;
+    display: flex;
+
+}
