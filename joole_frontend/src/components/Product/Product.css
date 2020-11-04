@@ -34,6 +34,7 @@
     margin: 0 0 0 0;
     color: #235370;
     font-weight: bold;
+    font-size: 1vw;
 }
 
 .properties-container {
@@ -52,6 +53,7 @@
 .properties {
     margin: 0 0 0 0;
     color: #595959;
+    font-size: 1vw;
 }
 
 .extra-properties-container {
@@ -67,6 +69,7 @@
 .extra-properties {
     margin: 0 0 0 0;
     color: #b00000;
+    font-size: 1vw;
 }
 
 .project-bottom-container {
@@ -85,4 +88,9 @@
     color: white;
     border-radius: 0.4vw;
     text-align: start;
+    font-size: 1vw;
+}
+
+.project-checkbox-lable {
+    font-size: 1vw;
 }

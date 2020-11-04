@@ -24,6 +24,7 @@
 }
 
 .text {
+    font-size: 4vw;
     background-color: transparent;
 }
 
@@ -44,6 +45,7 @@
     border-radius: 0.5vw;
     box-shadow: 0;
     cursor: pointer;
+    font-size: 1vw;
 }
 
 .submit-button:disabled {

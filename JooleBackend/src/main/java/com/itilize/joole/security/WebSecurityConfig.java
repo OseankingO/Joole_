@@ -55,21 +55,21 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
         return super.authenticationManagerBean();
     }
 
-    @Bean
-    CorsConfigurationSource corsConfigurationSource() {
-
-        CorsConfiguration configuration = new CorsConfiguration();
-
-        configuration.applyPermitDefaultValues();
-        //Must change later for localhost for UI
-        configuration.setAllowedOrigins(Arrays.asList("http://localhost:3000"));
-        configuration.setAllowedMethods(Arrays.asList("GET", "POST", "PUT", "PATCH", "DELETE"));
-        configuration.setAllowedHeaders(Arrays.asList("Authorization", "content-type", "x-auth-token"));
-        configuration.setExposedHeaders(Arrays.asList("Authorization"));
-        UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
-        source.registerCorsConfiguration("/**", configuration);
-        return source;
-    }
+//    @Bean
+//    CorsConfigurationSource corsConfigurationSource() {
+//
+//        CorsConfiguration configuration = new CorsConfiguration();
+//
+//        configuration.applyPermitDefaultValues();
+//        //Must change later for localhost for UI
+//        configuration.setAllowedOrigins(Arrays.asList("http://localhost:3000"));
+//        configuration.setAllowedMethods(Arrays.asList("GET", "POST", "PUT", "PATCH", "DELETE"));
+//        configuration.setAllowedHeaders(Arrays.asList("Authorization", "content-type", "x-auth-token"));
+//        configuration.setExposedHeaders(Arrays.asList("Authorization"));
+//        UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
+//        source.registerCorsConfiguration("/**", configuration);
+//        return source;
+//    }
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {

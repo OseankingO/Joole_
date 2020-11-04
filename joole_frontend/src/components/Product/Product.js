@@ -37,7 +37,7 @@ const Product = (props) => {
                         value={props.id} 
                         onChange={event => props.checkChange(event)}
                     />
-                    <label>Compare</label> 
+                    <label className='project-checkbox-lable'>Compare</label> 
                 </div>
                 <button className='project-add-button'>Add to</button>   
             </div>

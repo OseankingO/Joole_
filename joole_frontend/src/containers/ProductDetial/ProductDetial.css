@@ -74,7 +74,7 @@
 }
 
 .info-item {
-    height: 1vw;
+    height: 1.5vw;
     margin-top: 0;
     margin-bottom: 0;
     padding-top: 0.5vw;
@@ -82,6 +82,7 @@
     padding-left: 0.5vw;
     display: flex;
     align-items: center;
+    font-size: 1vw;
 }
 
 .info-name {
