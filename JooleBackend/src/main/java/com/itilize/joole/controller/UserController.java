@@ -19,6 +19,7 @@ import java.util.Map;
 import java.util.Optional;
 
 @CrossOrigin(origins = "http://localhost:3000")
+//@CrossOrigin(origins = "http://joole-frontend.s3-website.us-east-2.amazonaws.com")
 @RestController
 @RequestMapping("")
 public class UserController {
@@ -77,7 +78,7 @@ public class UserController {
         if(res.isPresent()) {
             return new ResponseEntity<>(res.get(), HttpStatus.OK);
         }
-        return new ResponseEntity<>("Username Existed!", HttpStatus.OK);
+        return new ResponseEntity<>("Username Existed!", HttpStatus.NOT_FOUND);
     }
 
     @PostMapping("/login")

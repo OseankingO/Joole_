@@ -188,6 +188,7 @@ class Auth extends Component {
             controls: updatedControls,
             isSignup: !this.state.isSignup
         });
+        this.props.emptyMessage();
     }
 
     render() {
@@ -222,7 +223,14 @@ class Auth extends Component {
         let errorMessage = null;
         if(this.props.error) {
             errorMessage = (
-                <p>{this.props.error.message}</p>
+                <p className='auth-error-message'>{this.props.error}</p>
+            );
+        }
+
+        let successMessage = null;
+        if(this.props.signedUp) {
+            successMessage = (
+                <p className='auth-success-message'>Signed Up Successfully!</p>
             );
         }
 
@@ -234,13 +242,14 @@ class Auth extends Component {
         return(
             <div className='Auth'>
                 {authRedirect}
-                {errorMessage}
                 <div className='logo-container'>
                     <div className='block'></div>
                     <p className='logo'>JOOLE</p>
                 </div>
                 
                 <h2 className='text'>Building Product Selection Platform</h2>
+                {errorMessage}
+                {successMessage}
                 <form className='form' onSubmit={this.submitHandler}>
                     {form}
                     <div className='submit-button-container'>
@@ -264,6 +273,7 @@ class Auth extends Component {
 
 const mapStateToProps = state => {
     return {
+        signedUp: state.auth.signedUp,
         loading: state.auth.loading,
         error: state.auth.error,
         isAuthenticated: state.auth.token !== null,
@@ -274,7 +284,8 @@ const mapStateToProps = state => {
 const mapDispatchToProps = dispatch => {
     return {
         logIn: (username, password) => dispatch(actions.logIn(username, password)),
-        signUp: (username, password, email) => dispatch(actions.signUp(username, password, email))
+        signUp: (username, password, email) => dispatch(actions.signUp(username, password, email)),
+        emptyMessage: () => dispatch(actions.emptyMessage())
     };
 };
 

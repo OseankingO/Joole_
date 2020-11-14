@@ -12,7 +12,12 @@ import categoryReducer from './store/reducers/category';
 import productReducer from './store/reducers/product';
 import { Provider } from 'react-redux';
 
-Axios.defaults.baseURL = 'localhost:8080/JooleBackend_war';
+// localhost
+// Axios.defaults.baseURL = 'http://localhost:8080/JooleBackend_war';
+
+// aws
+Axios.defaults.baseURL = 'http://ec2-3-133-103-215.us-east-2.compute.amazonaws.com:8080/JooleBackend/';
+
 Axios.defaults.headers.post['Content-Type'] = 'application/json';
 
 Axios.interceptors.request.use(request => {
@@ -32,8 +37,7 @@ Axios.interceptors.response.use(response => {
   // Edit request config
   return response;
 }, error => {
-  console.log(error);
-  return Promise.reject(error);
+  return Promise.reject(error.response);
 });
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;

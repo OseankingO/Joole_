@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 @CrossOrigin(origins = "http://localhost:3000")
+//@CrossOrigin(origins = "http://joole-frontend.s3-website.us-east-2.amazonaws.com")
 @RestController
 @RequestMapping("/brand")
 public class BrandController {

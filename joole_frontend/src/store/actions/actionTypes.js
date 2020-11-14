@@ -1,6 +1,9 @@
 export const AUTH_START = 'AUTH_START';
 export const AUTH_SUCCESS = 'AUTH_SUCCESS';
+export const AUTH_Fail = 'AUTH_Fail';
+export const AUTH_SIGNUP_SUCCESS = 'AUTH_SIGNUP_SUCCESS';
 export const AUTH_LOGOUT = 'AUTH_LOGOUT';
+export const AUTH_EMPTY_MESSAGE = 'AUTH_EMPTY_MESSAGE';
 
 export const CATEGORY_INIT_SUCCESS = 'CATEGORY_INIT_SUCCESS';
 export const CATEGORY_CHANGE_ID = 'CATEGORY_CHANGE_ID';

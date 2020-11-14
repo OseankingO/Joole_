@@ -1,7 +1,8 @@
 export {
     logIn,
     signUp,
-    logout
+    logout,
+    emptyMessage
 } from './subActions/auth';
 
 export {

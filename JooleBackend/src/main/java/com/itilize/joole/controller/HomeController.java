@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
 
 @CrossOrigin(origins = "http://localhost:3000")
+//@CrossOrigin(origins = "http://joole-frontend.s3-website.us-east-2.amazonaws.com")
 @RestController
 @RequestMapping("")
 public class HomeController {

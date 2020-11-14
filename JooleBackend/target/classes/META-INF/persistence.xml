@@ -7,9 +7,14 @@
     <persistence-unit name="joole">
         <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
         <properties>
-            <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/joole?serverTimezone=UTC" />
-            <property name="javax.persistence.jdbc.user" value="root" />
-            <property name="javax.persistence.jdbc.password" value="QXh15823107893" />
+<!--            for localhost-->
+<!--            <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/joole?serverTimezone=UTC" />-->
+<!--            <property name="javax.persistence.jdbc.user" value="root" />-->
+<!--            <property name="javax.persistence.jdbc.password" value="QXh15823107893" />-->
+            <!--            for aws rds-->
+            <property name="javax.persistence.jdbc.url" value="jdbc:mysql://joole-db.coimjhan6ccb.us-east-2.rds.amazonaws.com:3306/joole" />
+            <property name="javax.persistence.jdbc.user" value="sean" />
+            <property name="javax.persistence.jdbc.password" value="seanking" />
             <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver" />
 
             <property name="hibernate.show_sql" value="true" />

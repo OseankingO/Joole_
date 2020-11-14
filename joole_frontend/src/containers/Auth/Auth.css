@@ -67,3 +67,17 @@
     font-weight: bold;
     cursor: pointer;
 }
+
+.auth-error-message{
+    margin-top: 1vw;
+    font-size: 1vw;
+    font-weight: bold;
+    color: red;
+}
+
+.auth-success-message {
+    margin-top: 1vw;
+    font-size: 1vw;
+    font-weight: bold;
+    color: darkgreen;
+}
